@@ -1,7 +1,6 @@
-01-lvgl_spi_lcd/lcd_spi_169.o: \
-  ..\Middlewares\Third_Party\LCD\lcd_spi_169.c \
-  ..\Middlewares\Third_Party\LCD\include\lcd_spi_169.h \
-  ..\Core\Inc\main.h ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
+01-lvgl_spi_lcd/lcd_spi_169.o: ..\Core\Src\lcd_spi_169.c \
+  ..\Core\Inc\lcd_spi_169.h ..\Core\Inc\main.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \
@@ -29,6 +28,7 @@
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
-  D:\Keil_v5\ARM\ARMCLANG\include\stdio.h \
-  ..\Middlewares\Third_Party\LCD\include\lcd_fonts.h \
-  ..\Middlewares\Third_Party\LCD\include\lcd_image.h
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
+  D:\Keil_v5\ARM\ARMCLANG\include\stdio.h ..\Core\Inc\lcd_fonts.h \
+  ..\Core\Inc\lcd_image.h ..\Core\Inc\spi.h

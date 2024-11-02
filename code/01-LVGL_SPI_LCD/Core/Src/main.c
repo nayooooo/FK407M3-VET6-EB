@@ -19,12 +19,14 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "spi.h"
+#include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "lcd_spi_169.h"
+#include "lvgl.h"
+#include "./porting/lv_port_disp.h"
 
 /* USER CODE END Includes */
 
@@ -90,9 +92,13 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI3_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   
-  SPI_LCD_Init();
+  HAL_TIM_Base_Start_IT(&htim6);
+  
+  lv_init();
+  lv_port_disp_init();
 
   /* USER CODE END 2 */
 
@@ -100,8 +106,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  void LCD_Test_Clear(void);
-	  LCD_Test_Clear();
+	  lv_timer_handler();
 	  
     /* USER CODE END WHILE */
 
@@ -156,36 +161,6 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-void LCD_Test_Clear(void)
-{
-	uint8_t	i = 0;			// 计数变量
-	
-	LCD_SetDirection(Direction_V);		
-	LCD_SetTextFont(&CH_Font24);			// 设置2424中文字体,ASCII字体对应为2412
-	LCD_SetColor(LCD_BLACK);				// 设置画笔颜色
-
-	for(i=0;i<8;i++)
-	{
-		switch (i)		// 切换背景色
-		{
-			case 0: LCD_SetBackColor(LIGHT_RED); 		break;	
-			case 1: LCD_SetBackColor(LIGHT_GREEN); 	break;				
-			case 2: LCD_SetBackColor(LIGHT_BLUE); 		break;
-			case 3: LCD_SetBackColor(LIGHT_YELLOW); 	break;
-			case 4: LCD_SetBackColor(LIGHT_CYAN);		break;
-			case 5: LCD_SetBackColor(LIGHT_GREY); 		break;
-			case 6: LCD_SetBackColor(LIGHT_MAGENTA); 	break;
-			case 7: LCD_SetBackColor(LCD_WHITE); 		break;			
-			default:	break;			
-		}
-		LCD_Clear();		// 清屏
-		LCD_DisplayText(13, 70,"STM32 刷屏测试");
-		LCD_DisplayText(13,106,"屏幕分辨率:240*280");
-		LCD_DisplayText(13,142,"控制器:ST7789");	
-		HAL_Delay(1000);	// 延时
-	}
-}
 
 /* USER CODE END 4 */
 

@@ -1,0 +1,19 @@
+01-lvgl_spi_lcd/lv_string_builtin.o: \
+  ..\LVGL\GUI\src\stdlib\builtin\lv_string_builtin.c \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\lv_conf_internal.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\lv_conf_kconfig.h \
+  ..\LVGL\GUI\lv_conf.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\misc\lv_assert.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\misc\..\lv_conf_internal.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\misc\lv_log.h \
+  D:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\misc\lv_types.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\misc\..\stdlib\lv_mem.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\misc\..\stdlib\..\lv_conf_internal.h \
+  D:\Keil_v5\ARM\ARMCLANG\include\stddef.h \
+  D:\Keil_v5\ARM\ARMCLANG\include\string.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\misc\..\stdlib\..\misc\lv_types.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\misc\lv_math.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\stdlib\lv_string.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\stdlib\..\lv_conf_internal.h \
+  ..\LVGL\GUI\src\stdlib\builtin\..\..\stdlib\lv_mem.h
