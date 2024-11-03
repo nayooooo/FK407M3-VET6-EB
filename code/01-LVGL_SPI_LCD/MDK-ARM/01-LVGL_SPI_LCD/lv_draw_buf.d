@@ -6,21 +6,20 @@
   ..\LVGL\GUI\src\draw\lv_draw_buf.h \
   ..\LVGL\GUI\src\draw\..\misc\lv_area.h \
   D:\Keil_v5\ARM\ARMCLANG\include\stdbool.h \
-  D:\Keil_v5\ARM\ARMCLANG\include\stddef.h \
   ..\LVGL\GUI\src\draw\..\misc\lv_color.h \
   ..\LVGL\GUI\src\draw\..\misc\lv_assert.h \
   ..\LVGL\GUI\src\draw\..\misc\lv_log.h \
   ..\LVGL\GUI\src\draw\..\misc\..\stdlib\lv_mem.h \
   ..\LVGL\GUI\src\draw\..\misc\..\stdlib\..\lv_conf_internal.h \
+  D:\Keil_v5\ARM\ARMCLANG\include\stddef.h \
   D:\Keil_v5\ARM\ARMCLANG\include\string.h \
   ..\LVGL\GUI\src\draw\..\misc\..\stdlib\..\misc\lv_types.h \
   ..\LVGL\GUI\src\draw\..\misc\lv_math.h \
   ..\LVGL\GUI\src\draw\..\misc\lv_palette.h \
   ..\LVGL\GUI\src\draw\..\misc\lv_color_op.h \
+  ..\LVGL\GUI\src\draw\lv_image_buf.h \
   ..\LVGL\GUI\src\draw\..\stdlib\lv_string.h \
   ..\LVGL\GUI\src\draw\..\stdlib\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\draw\lv_image_dsc.h \
-  ..\LVGL\GUI\src\draw\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\draw\..\core\lv_global.h \
   ..\LVGL\GUI\src\draw\..\core\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\draw\..\core\..\misc\lv_types.h \
@@ -82,6 +81,7 @@
   ..\LVGL\GUI\src\draw\..\core\..\draw\sw\..\..\misc\lv_style.h \
   ..\LVGL\GUI\src\draw\..\core\..\draw\lv_draw_label.h \
   ..\LVGL\GUI\src\draw\..\core\..\draw\lv_draw_image.h \
+  ..\LVGL\GUI\src\draw\..\core\..\draw\lv_image_buf.h \
   ..\LVGL\GUI\src\draw\..\core\..\draw\lv_draw_arc.h \
   ..\LVGL\GUI\src\draw\..\core\..\draw\lv_draw_line.h \
   ..\LVGL\GUI\src\draw\..\core\..\draw\lv_draw_triangle.h \
@@ -112,6 +112,8 @@
   ..\LVGL\GUI\src\draw\..\core\..\misc\lv_color_op.h \
   ..\LVGL\GUI\src\draw\..\core\..\misc\lv_ll.h \
   ..\LVGL\GUI\src\draw\..\core\..\misc\lv_log.h \
+  ..\LVGL\GUI\src\draw\..\core\..\misc\lv_profiler_builtin.h \
+  ..\LVGL\GUI\src\draw\..\core\..\misc\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\draw\..\core\..\misc\lv_style.h \
   ..\LVGL\GUI\src\draw\..\core\..\misc\lv_timer.h \
   ..\LVGL\GUI\src\draw\..\core\..\others\sysmon\lv_sysmon.h \

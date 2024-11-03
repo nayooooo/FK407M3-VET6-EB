@@ -104,16 +104,16 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 #include "lvgl.h"
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	static uint16_t ms = 0;
+//	static uint16_t ms = 0;
 	
 	if (htim->Instance == TIM6)
 	{
-		ms++;
-		if (ms >= 1000)
-		{
-			ms = 0;
-			HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-		}
+//		ms++;
+//		if (ms >= 1000)
+//		{
+//			ms = 0;
+//			HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+//		}
 		lv_tick_inc(1);
 	}
 }

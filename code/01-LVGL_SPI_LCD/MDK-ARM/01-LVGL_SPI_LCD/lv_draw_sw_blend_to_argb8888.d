@@ -29,10 +29,9 @@
   ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\draw\..\misc\lv_math.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\draw\..\misc\lv_palette.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\draw\..\misc\lv_color_op.h \
+  ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\draw\lv_image_buf.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\draw\..\stdlib\lv_string.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\draw\..\stdlib\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\draw\lv_image_dsc.h \
-  ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\draw\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\misc\lv_area.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\misc\lv_types.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\..\misc\..\font\..\misc\cache\lv_cache.h \
@@ -82,6 +81,7 @@
   ..\LVGL\GUI\src\draw\sw\blend\..\..\sw\..\..\misc\lv_style.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\lv_draw_label.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\lv_draw_image.h \
+  ..\LVGL\GUI\src\draw\sw\blend\..\..\lv_image_buf.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\lv_draw_arc.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\lv_draw_line.h \
   ..\LVGL\GUI\src\draw\sw\blend\..\..\lv_draw_triangle.h \

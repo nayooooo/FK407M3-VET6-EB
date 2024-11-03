@@ -49,9 +49,8 @@
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\draw\..\misc\lv_math.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\draw\..\misc\lv_palette.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\draw\..\misc\lv_color_op.h \
+  ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\draw\lv_image_buf.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\draw\..\stdlib\lv_string.h \
-  ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\draw\lv_image_dsc.h \
-  ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\draw\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\misc\lv_area.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\misc\lv_types.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\..\font\..\misc\cache\lv_cache.h \
@@ -112,6 +111,7 @@
   ..\LVGL\GUI\src\font\..\..\src\core\..\display\..\draw\lv_draw_label.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\display\..\draw\..\misc\lv_bidi.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\display\..\draw\lv_draw_image.h \
+  ..\LVGL\GUI\src\font\..\..\src\core\..\display\..\draw\lv_image_buf.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\display\..\draw\lv_draw_arc.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\display\..\draw\lv_draw_line.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\display\..\draw\lv_draw_triangle.h \
@@ -178,8 +178,7 @@
   ..\LVGL\GUI\src\font\..\..\src\widgets\canvas\..\image\lv_image.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\canvas\..\..\draw\lv_draw_image.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\chart\lv_chart.h \
-  ..\LVGL\GUI\src\font\..\..\src\widgets\chart\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\widgets\chart\..\..\core\lv_obj.h \
+  ..\LVGL\GUI\src\font\..\..\src\widgets\chart\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\checkbox\lv_checkbox.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\checkbox\..\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\checkbox\..\..\core\lv_obj.h \
@@ -213,26 +212,24 @@
   ..\LVGL\GUI\src\font\..\..\src\widgets\slider\lv_slider.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\slider\..\bar\lv_bar.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\span\lv_span.h \
-  ..\LVGL\GUI\src\font\..\..\src\widgets\span\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\widgets\span\..\..\core\lv_obj.h \
+  ..\LVGL\GUI\src\font\..\..\src\widgets\span\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\spinbox\lv_spinbox.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\spinbox\..\textarea\lv_textarea.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\spinbox\..\textarea\..\label\lv_label.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\spinner\lv_spinner.h \
-  ..\LVGL\GUI\src\font\..\..\src\widgets\spinner\..\..\lv_conf_internal.h \
+  ..\LVGL\GUI\src\font\..\..\src\widgets\spinner\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\switch\lv_switch.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\switch\..\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\switch\..\..\core\lv_obj.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\table\lv_table.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\table\..\label\lv_label.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\tabview\lv_tabview.h \
-  ..\LVGL\GUI\src\font\..\..\src\widgets\tabview\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\widgets\tabview\..\..\core\lv_obj.h \
+  ..\LVGL\GUI\src\font\..\..\src\widgets\tabview\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\textarea\lv_textarea.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\tileview\lv_tileview.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\tileview\..\..\core\lv_obj.h \
   ..\LVGL\GUI\src\font\..\..\src\widgets\win\lv_win.h \
-  ..\LVGL\GUI\src\font\..\..\src\widgets\win\..\..\lv_conf_internal.h \
+  ..\LVGL\GUI\src\font\..\..\src\widgets\win\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\others\snapshot\lv_snapshot.h \
   ..\LVGL\GUI\src\font\..\..\src\others\snapshot\..\..\core\lv_obj.h \
   ..\LVGL\GUI\src\font\..\..\src\others\sysmon\lv_sysmon.h \
@@ -240,33 +237,26 @@
   ..\LVGL\GUI\src\font\..\..\src\others\sysmon\..\..\others\observer\lv_observer.h \
   ..\LVGL\GUI\src\font\..\..\src\others\sysmon\..\..\others\observer\..\..\core\lv_obj.h \
   ..\LVGL\GUI\src\font\..\..\src\others\monkey\lv_monkey.h \
-  ..\LVGL\GUI\src\font\..\..\src\others\monkey\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\others\monkey\..\..\indev\lv_indev.h \
+  ..\LVGL\GUI\src\font\..\..\src\others\monkey\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\others\gridnav\lv_gridnav.h \
   ..\LVGL\GUI\src\font\..\..\src\others\gridnav\..\..\core\lv_obj.h \
   ..\LVGL\GUI\src\font\..\..\src\others\fragment\lv_fragment.h \
   ..\LVGL\GUI\src\font\..\..\src\others\fragment\..\..\core\lv_obj.h \
   ..\LVGL\GUI\src\font\..\..\src\others\imgfont\lv_imgfont.h \
-  ..\LVGL\GUI\src\font\..\..\src\others\imgfont\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\others\imgfont\..\..\font\lv_font.h \
+  ..\LVGL\GUI\src\font\..\..\src\others\imgfont\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\others\observer\lv_observer.h \
   ..\LVGL\GUI\src\font\..\..\src\others\ime\lv_ime_pinyin.h \
-  ..\LVGL\GUI\src\font\..\..\src\others\ime\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\others\ime\..\..\core\lv_obj.h \
+  ..\LVGL\GUI\src\font\..\..\src\others\ime\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\others\file_explorer\lv_file_explorer.h \
-  ..\LVGL\GUI\src\font\..\..\src\others\file_explorer\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\others\file_explorer\..\..\core\lv_obj.h \
+  ..\LVGL\GUI\src\font\..\..\src\others\file_explorer\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\barcode\lv_barcode.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\barcode\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\barcode\..\..\misc\lv_types.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\barcode\..\..\misc\lv_color.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\barcode\..\..\widgets\canvas\lv_canvas.h \
+  ..\LVGL\GUI\src\font\..\..\src\libs\barcode\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\bin_decoder\lv_bin_decoder.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\bin_decoder\..\..\draw\lv_image_decoder.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\bmp\lv_bmp.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\bmp\..\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\rle\lv_rle.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\rle\..\..\lv_conf_internal.h \
+  ..\LVGL\GUI\src\font\..\..\src\libs\rle\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\fsdrv\lv_fsdrv.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\fsdrv\..\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\lodepng\lv_lodepng.h \
@@ -276,24 +266,20 @@
   ..\LVGL\GUI\src\font\..\..\src\libs\gif\lv_gif.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\gif\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\qrcode\lv_qrcode.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\qrcode\..\..\lv_conf_internal.h \
+  ..\LVGL\GUI\src\font\..\..\src\libs\qrcode\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\tjpgd\lv_tjpgd.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\libjpeg_turbo\lv_libjpeg_turbo.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\libjpeg_turbo\..\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\freetype\lv_freetype.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\freetype\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\freetype\..\..\misc\lv_types.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\freetype\..\..\misc\lv_event.h \
+  ..\LVGL\GUI\src\font\..\..\src\libs\freetype\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\rlottie\lv_rlottie.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\rlottie\..\..\lv_conf_internal.h \
+  ..\LVGL\GUI\src\font\..\..\src\libs\rlottie\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\ffmpeg\lv_ffmpeg.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\ffmpeg\..\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\ffmpeg\..\..\widgets\image\lv_image.h \
+  ..\LVGL\GUI\src\font\..\..\src\libs\ffmpeg\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\libs\tiny_ttf\lv_tiny_ttf.h \
-  ..\LVGL\GUI\src\font\..\..\src\libs\tiny_ttf\..\..\lv_conf_internal.h \
+  ..\LVGL\GUI\src\font\..\..\src\libs\tiny_ttf\..\..\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\layouts\lv_layout.h \
   ..\LVGL\GUI\src\font\..\..\src\draw\lv_draw.h \
-  ..\LVGL\GUI\src\font\..\..\src\draw\lv_draw_buf.h \
   ..\LVGL\GUI\src\font\..\..\src\draw\lv_draw_vector.h \
   ..\LVGL\GUI\src\font\..\..\src\draw\..\misc\lv_array.h \
   ..\LVGL\GUI\src\font\..\..\src\themes\lv_theme.h \
@@ -322,7 +308,6 @@
   ..\LVGL\GUI\src\font\..\..\src\drivers\display\tft_espi\lv_tft_espi.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\display\tft_espi\..\..\..\display\lv_display.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\nuttx\lv_nuttx_entry.h \
-  ..\LVGL\GUI\src\font\..\..\src\drivers\nuttx\..\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\nuttx\..\..\display\lv_display.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\nuttx\..\..\indev\lv_indev.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\nuttx\lv_nuttx_fbdev.h \
@@ -331,14 +316,12 @@
   ..\LVGL\GUI\src\font\..\..\src\drivers\nuttx\lv_nuttx_libuv.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\evdev\lv_evdev.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\evdev\..\..\indev\lv_indev.h \
-  ..\LVGL\GUI\src\font\..\..\src\drivers\libinput\lv_libinput.h \
-  ..\LVGL\GUI\src\font\..\..\src\drivers\libinput\..\..\indev\lv_indev.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\windows\lv_windows_input.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\windows\..\..\display\lv_display.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\windows\..\..\indev\lv_indev.h \
   ..\LVGL\GUI\src\font\..\..\src\drivers\windows\lv_windows_display.h \
-  ..\LVGL\GUI\src\font\..\..\src\lv_api_map_v8.h \
-  ..\LVGL\GUI\src\font\..\..\src\lv_api_map_v9_0.h \
+  ..\LVGL\GUI\src\font\..\..\src\lv_api_map.h \
+  ..\LVGL\GUI\src\font\..\..\src\..\lvgl.h \
   ..\LVGL\GUI\src\font\..\..\src\core\lv_global.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\draw\sw\lv_draw_sw.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\draw\sw\..\lv_draw.h \
@@ -356,6 +339,7 @@
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\lv_color_op.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\lv_ll.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\lv_log.h \
+  ..\LVGL\GUI\src\font\..\..\src\core\..\misc\lv_profiler_builtin.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\misc\lv_timer.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\others\sysmon\lv_sysmon.h \
   ..\LVGL\GUI\src\font\..\..\src\core\..\stdlib\builtin\lv_tlsf.h \

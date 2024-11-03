@@ -1,5 +1,6 @@
-01-lvgl_spi_lcd/tjpgd.o: ..\LVGL\GUI\src\libs\tjpgd\tjpgd.c \
-  ..\LVGL\GUI\src\libs\tjpgd\tjpgd.h \
-  ..\LVGL\GUI\src\libs\tjpgd\tjpgdcnf.h \
-  D:\Keil_v5\ARM\ARMCLANG\include\string.h \
-  D:\Keil_v5\ARM\ARMCLANG\include\stdint.h
+01-lvgl_spi_lcd/tjpgd.o: ..\LVGL\GUI\src\extra\libs\sjpg\tjpgd.c \
+  ..\LVGL\GUI\src\extra\libs\sjpg\tjpgd.h \
+  ..\LVGL\GUI\src\extra\libs\sjpg\..\..\..\lv_conf_internal.h \
+  D:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
+  ..\LVGL\GUI\src\extra\libs\sjpg\..\..\..\lv_conf_kconfig.h \
+  ..\LVGL\GUI\lv_conf.h

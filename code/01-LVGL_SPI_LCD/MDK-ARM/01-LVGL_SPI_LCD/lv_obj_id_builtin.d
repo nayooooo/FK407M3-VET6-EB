@@ -25,10 +25,9 @@
   ..\LVGL\GUI\src\core\..\misc\..\font\..\draw\..\misc\lv_math.h \
   ..\LVGL\GUI\src\core\..\misc\..\font\..\draw\..\misc\lv_palette.h \
   ..\LVGL\GUI\src\core\..\misc\..\font\..\draw\..\misc\lv_color_op.h \
+  ..\LVGL\GUI\src\core\..\misc\..\font\..\draw\lv_image_buf.h \
   ..\LVGL\GUI\src\core\..\misc\..\font\..\draw\..\stdlib\lv_string.h \
   ..\LVGL\GUI\src\core\..\misc\..\font\..\draw\..\stdlib\..\lv_conf_internal.h \
-  ..\LVGL\GUI\src\core\..\misc\..\font\..\draw\lv_image_dsc.h \
-  ..\LVGL\GUI\src\core\..\misc\..\font\..\draw\..\lv_conf_internal.h \
   ..\LVGL\GUI\src\core\..\misc\..\font\..\misc\lv_area.h \
   ..\LVGL\GUI\src\core\..\misc\..\font\..\misc\lv_types.h \
   ..\LVGL\GUI\src\core\..\misc\..\font\..\misc\cache\lv_cache.h \
@@ -95,6 +94,7 @@
   ..\LVGL\GUI\src\core\..\display\..\draw\lv_draw_label.h \
   ..\LVGL\GUI\src\core\..\display\..\draw\..\misc\lv_bidi.h \
   ..\LVGL\GUI\src\core\..\display\..\draw\lv_draw_image.h \
+  ..\LVGL\GUI\src\core\..\display\..\draw\lv_image_buf.h \
   ..\LVGL\GUI\src\core\..\display\..\draw\lv_draw_arc.h \
   ..\LVGL\GUI\src\core\..\display\..\draw\lv_draw_line.h \
   ..\LVGL\GUI\src\core\..\display\..\draw\lv_draw_triangle.h \
@@ -135,6 +135,7 @@
   ..\LVGL\GUI\src\core\..\draw\sw\blend\..\..\..\misc\lv_style.h \
   ..\LVGL\GUI\src\core\..\misc\lv_color_op.h \
   ..\LVGL\GUI\src\core\..\misc\lv_log.h \
+  ..\LVGL\GUI\src\core\..\misc\lv_profiler_builtin.h \
   ..\LVGL\GUI\src\core\..\others\sysmon\lv_sysmon.h \
   ..\LVGL\GUI\src\core\..\others\sysmon\..\..\misc\lv_timer.h \
   ..\LVGL\GUI\src\core\..\others\sysmon\..\..\others\observer\lv_observer.h \
