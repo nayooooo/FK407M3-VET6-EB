@@ -166,6 +166,10 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
     if(disp_flush_enabled) {
         /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one*/
 
+//		uint16_t DataSize = ((uint16_t)(area->x2) - (uint16_t)(area->x1) + 1) * ((uint16_t)(area->y2) - (uint16_t)(area->y1) + 1);
+//		LCD_SetAddress((uint16_t)(area->x1), (uint16_t)(area->y1), (uint16_t)(area->x2), (uint16_t)(area->y2));
+//		LCD_WriteBuff((uint16_t*)color_p, DataSize);
+		
         int32_t x;
         int32_t y;
         for(y = area->y1; y <= area->y2; y++) {

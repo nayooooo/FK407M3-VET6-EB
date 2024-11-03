@@ -66,6 +66,7 @@ void  LCD_SetColor(uint32_t Color); 				   //	设置画笔颜色
 void  LCD_SetColor_RGB565(uint16_t Color);
 void  LCD_SetBackColor(uint32_t Color);  				//	设置背景颜色
 void  LCD_SetDirection(uint8_t direction);  	      //	设置显示方向
+void  LCD_WriteBuff(uint16_t *DataBuff, uint16_t DataSize);
 
 void LCD_DrawPoint(uint16_t x,uint16_t y,uint32_t color);
 void LCD_DrawPoint_LVGL(uint16_t x,uint16_t y,uint16_t color);
