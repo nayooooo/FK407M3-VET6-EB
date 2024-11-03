@@ -172,6 +172,8 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
 		
         int32_t x;
         int32_t y;
+		LCD_SetAddress((uint16_t)(area->x1), (uint16_t)(area->y1), (uint16_t)(area->x2), (uint16_t)(area->y2));
+		LCD_CS_L;
         for(y = area->y1; y <= area->y2; y++) {
             for(x = area->x1; x <= area->x2; x++) {
                 /*Put a pixel to the display. For example:*/
@@ -180,6 +182,7 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
                 color_p++;
             }
         }
+		LCD_CS_H;
     }
 
     /*IMPORTANT!!!

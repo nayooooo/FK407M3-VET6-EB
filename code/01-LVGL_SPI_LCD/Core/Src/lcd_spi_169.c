@@ -477,14 +477,14 @@ void LCD_DrawPoint(uint16_t x,uint16_t y,uint32_t color)
 
 void LCD_DrawPoint_LVGL(uint16_t x,uint16_t y,uint16_t color)
 {
-	LCD_SetAddress(x,y,x,y);
+//	LCD_SetAddress(x,y,x,y);
 	
-	LCD_CS_L;
+//	LCD_CS_L;
 	
 	LCD_WriteData_16bit(color);
 	while( (LCD_SPI.Instance->SR & 0x0080) != RESET);
 	
-	LCD_CS_H;
+//	LCD_CS_H;
 }
 
 
