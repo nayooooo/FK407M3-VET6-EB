@@ -188,6 +188,16 @@
 "01-lvgl_spi_lcd\lv_table.o"
 "01-lvgl_spi_lcd\lv_textarea.o"
 "01-lvgl_spi_lcd\lv_demo_stress.o"
+"01-lvgl_spi_lcd\lv_demo_benchmark.o"
+"01-lvgl_spi_lcd\img_benchmark_cogwheel_alpha16.o"
+"01-lvgl_spi_lcd\img_benchmark_cogwheel_argb.o"
+"01-lvgl_spi_lcd\img_benchmark_cogwheel_chroma_keyed.o"
+"01-lvgl_spi_lcd\img_benchmark_cogwheel_indexed16.o"
+"01-lvgl_spi_lcd\img_benchmark_cogwheel_rgb.o"
+"01-lvgl_spi_lcd\img_benchmark_cogwheel_rgb565a8.o"
+"01-lvgl_spi_lcd\lv_font_bechmark_montserrat_12_compr_az.c.o"
+"01-lvgl_spi_lcd\lv_font_bechmark_montserrat_16_compr_az.c.o"
+"01-lvgl_spi_lcd\lv_font_bechmark_montserrat_28_compr_az.c.o"
 --strict --scatter "01-LVGL_SPI_LCD\01-LVGL_SPI_LCD.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -229,7 +229,9 @@
   ..\LVGL\GUI\src\extra\widgets\span\lv_span.h \
   ..\LVGL\GUI\src\extra\widgets\span\..\..\..\lvgl.h \
   ..\LVGL\GUI\.\porting\lv_port_disp.h ..\LVGL\GUI\.\porting\..\lvgl.h \
-  ..\Core\Inc\lcd_spi_169.h ..\LVGL\GUI\.\..\GUI_APP\demos\lv_demos.h \
-  ..\LVGL\GUI\.\..\GUI_APP\demos\..\..\GUI\lvgl.h \
-  ..\LVGL\GUI\.\..\GUI_APP\demos\stress\lv_demo_stress.h \
-  ..\LVGL\GUI\.\..\GUI_APP\demos\stress\..\lv_demos.h
+  ..\Core\Inc\lcd_spi_169.h ..\LVGL\GUI\.\demos\lv_demos.h \
+  ..\LVGL\GUI\.\demos\..\lvgl.h \
+  ..\LVGL\GUI\.\demos\benchmark\lv_demo_benchmark.h \
+  ..\LVGL\GUI\.\demos\benchmark\..\lv_demos.h \
+  ..\LVGL\GUI\.\demos\stress\lv_demo_stress.h \
+  ..\LVGL\GUI\.\demos\stress\..\lv_demos.h

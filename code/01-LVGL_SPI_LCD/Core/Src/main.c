@@ -27,7 +27,7 @@
 
 #include "lvgl.h"
 #include "./porting/lv_port_disp.h"
-#include "./../GUI_APP/demos/lv_demos.h"
+#include "./demos/lv_demos.h"
 
 /* USER CODE END Includes */
 
@@ -106,11 +106,14 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   
-  lv_demo_stress();
+  lv_demo_benchmark();
+//  lv_demo_stress();
   
   while (1)
   {
 	  lv_timer_handler();
+	  
+	  HAL_Delay(1);
 	  
     /* USER CODE END WHILE */
 

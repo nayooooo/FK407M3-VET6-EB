@@ -1,5 +1,5 @@
-01-lvgl_spi_lcd/lv_port_disp.o: ..\LVGL\GUI\porting\lv_port_disp.c \
-  ..\LVGL\GUI\porting\lv_port_disp.h ..\LVGL\GUI\porting\..\lvgl.h \
+01-lvgl_spi_lcd/lv_port_indev.o: ..\LVGL\GUI\porting\lv_port_indev.c \
+  ..\LVGL\GUI\porting\lv_port_indev.h ..\LVGL\GUI\porting\..\lvgl.h \
   ..\LVGL\GUI\porting\..\src\misc\lv_log.h \
   ..\LVGL\GUI\porting\..\src\misc\..\lv_conf_internal.h \
   D:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
@@ -215,34 +215,4 @@
   ..\LVGL\GUI\porting\..\src\extra\widgets\imgbtn\lv_imgbtn.h \
   ..\LVGL\GUI\porting\..\src\extra\widgets\imgbtn\..\..\..\lvgl.h \
   ..\LVGL\GUI\porting\..\src\extra\widgets\span\lv_span.h \
-  ..\LVGL\GUI\porting\..\src\extra\widgets\span\..\..\..\lvgl.h \
-  ..\Core\Inc\lcd_spi_169.h ..\Core\Inc\main.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
-  ..\Core\Inc\stm32f4xx_hal_conf.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
-  ..\Drivers\CMSIS\Include\core_cm4.h \
-  D:\embedded\EmbeddedHardware\products\FK407M3-VET6-EB\code\01-LVGL_SPI_LCD\Drivers\CMSIS\Include\cmsis_version.h \
-  D:\embedded\EmbeddedHardware\products\FK407M3-VET6-EB\code\01-LVGL_SPI_LCD\Drivers\CMSIS\Include\cmsis_compiler.h \
-  D:\embedded\EmbeddedHardware\products\FK407M3-VET6-EB\code\01-LVGL_SPI_LCD\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\embedded\EmbeddedHardware\products\FK407M3-VET6-EB\code\01-LVGL_SPI_LCD\Drivers\CMSIS\Include\mpu_armv7.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  ..\Core\Inc\spi.h
+  ..\LVGL\GUI\porting\..\src\extra\widgets\span\..\..\..\lvgl.h

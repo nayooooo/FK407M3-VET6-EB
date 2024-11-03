@@ -158,6 +158,7 @@ void disp_disable_update(void)
     disp_flush_enabled = false;
 }
 
+#include "spi.h"
 /*Flush the content of the internal buffer the specific area on the display
  *You can use DMA or any hardware acceleration to do this operation in the background but
  *'lv_disp_flush_ready()' has to be called when finished.*/
@@ -166,23 +167,24 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
     if(disp_flush_enabled) {
         /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one*/
 
-//		uint16_t DataSize = ((uint16_t)(area->x2) - (uint16_t)(area->x1) + 1) * ((uint16_t)(area->y2) - (uint16_t)(area->y1) + 1);
-//		LCD_SetAddress((uint16_t)(area->x1), (uint16_t)(area->y1), (uint16_t)(area->x2), (uint16_t)(area->y2));
-//		LCD_WriteBuff((uint16_t*)color_p, DataSize);
-		
-        int32_t x;
-        int32_t y;
+		uint16_t DataSize = ((uint16_t)(area->x2) - (uint16_t)(area->x1) + 1) * ((uint16_t)(area->y2) - (uint16_t)(area->y1) + 1);
 		LCD_SetAddress((uint16_t)(area->x1), (uint16_t)(area->y1), (uint16_t)(area->x2), (uint16_t)(area->y2));
-		LCD_CS_L;
-        for(y = area->y1; y <= area->y2; y++) {
-            for(x = area->x1; x <= area->x2; x++) {
-                /*Put a pixel to the display. For example:*/
-                /*put_px(x, y, *color_p)*/
-				LCD_DrawPoint_LVGL((uint16_t)x, (uint16_t)y, *((uint16_t*)color_p));
-                color_p++;
-            }
-        }
-		LCD_CS_H;
+		LCD_WriteBuff((uint16_t*)color_p, DataSize);
+		
+//        int32_t x;
+//        int32_t y;
+//		LCD_SetAddress((uint16_t)(area->x1), (uint16_t)(area->y1), (uint16_t)(area->x2), (uint16_t)(area->y2));
+//		LCD_CS_L;
+//        for(y = area->y1; y <= area->y2; y++) {
+//            for(x = area->x1; x <= area->x2; x++) {
+//                /*Put a pixel to the display. For example:*/
+//                /*put_px(x, y, *color_p)*/
+//				LCD_DrawPoint_LVGL((uint16_t)x, (uint16_t)y, *((uint16_t*)color_p));
+//                color_p++;
+//            }
+//        }
+//		while( (hspi3.Instance->SR & 0x0080) != RESET);
+//		LCD_CS_H;
     }
 
     /*IMPORTANT!!!
