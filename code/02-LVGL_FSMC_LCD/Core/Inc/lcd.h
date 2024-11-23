@@ -81,7 +81,7 @@ extern u16  POINT_COLOR;//默认红色
 extern u16  BACK_COLOR; //背景颜色.默认为白色
 //////////////////////////////////////////////////////////////////////////////////	 
 //-----------------LCD端口定义---------------- 
-#define LCD_USE_FSCM		(0)
+#define LCD_USE_FSCM		(1)
 
 #define LCD_BL_SET()				LCD_BL_GPIO_Port->BSRR = LCD_BL_Pin
 #define LCD_BL_RESET()				LCD_BL_GPIO_Port->BSRR = LCD_BL_Pin << 16
@@ -98,8 +98,17 @@ extern u16  BACK_COLOR; //背景颜色.默认为白色
 #define LCD_RD_SET()				GPIOD->BSRR = GPIO_PIN_4
 #define LCD_RD_RESET()				GPIOD->BSRR = GPIO_PIN_4 << 16
 #else
-#define LCD_FSMC_ADDR_DATA			((uint32_t)0x60020000)
-#define LCD_FSMC_ADDR_CMD			((uint32_t)0x60000000)
+//LCD地址结构体
+typedef struct
+{
+	volatile uint16_t LCD_REG;
+    volatile uint16_t LCD_RAM;
+} LCD_TypeDef;
+#define LCD_BASE        ((uint32_t)(0x60000000 | 0x0001FFFE))
+#define LCD             ((LCD_TypeDef *) LCD_BASE)
+
+#define LCD_FSMC_ADDR_CMD			((uint32_t)0x60020000)
+#define LCD_FSMC_ADDR_DATA			((uint32_t)0x60020002)
 #endif  // LCD_USE_FSCM 
 
 extern u8 DFT_SCAN_DIR;
@@ -157,13 +166,16 @@ u16 LCD_Get_Width(void);
 u16 LCD_Get_Height(void);
 u8 LCD_Get_Dir(void);
 u8 LCD_Get_Scan_Dir(void);
-void LCD_WR_REG(u8);
-void LCD_WR_DATA(u16);
+//void LCD_WR_REG(u8);
+//void LCD_WR_DATA(u16);
+void LCD_WR_REG(volatile u8);
+void LCD_WR_DATA(volatile u16);
 void LCD_Scan_Dir(u8 dir);							//设置屏扫描方向
 void LCD_Display_Dir(u8 dir);						//设置屏幕显示方向
 void LCD_Init(void);								//初始化
 void LCD_WriteRAM_Prepare(void);
-void LCD_WriteRAM(u16 RGB_Code);	
+//void LCD_WriteRAM(u16 RGB_Code);	
+void LCD_WriteRAM(volatile u16 RGB_Code);	
 #if !LCD_USE_FSCM
 	#ifdef DATAOUT
 		#undef DATAOUT

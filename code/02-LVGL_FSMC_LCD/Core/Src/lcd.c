@@ -85,55 +85,76 @@ _lcd_dev lcddev;
 	#endif  // LCD_USE_FSCM
 	//写寄存器函数  //并口用到的函数
 	//regval:寄存器值  
-	void LCD_WR_REG(u8 regval)
-	{ 
-	#if !LCD_USE_FSCM
-		LCD_RS_RESET();
-		LCD_CS_RESET();
-		DATAOUT(regval);
-		LCD_WR_RESET();
-		LCD_WR_SET();
-		LCD_CS_SET();
-	#else
+//	void LCD_WR_REG(u8 regval)
+//	{ 
+//	#if !LCD_USE_FSCM
+//		LCD_RS_RESET();
+//		LCD_CS_RESET();
+//		DATAOUT(regval);
+//		LCD_WR_RESET();
+//		LCD_WR_SET();
+//		LCD_CS_SET();
+//	#else
+//		regval = regval;
+//		*(uint16_t*)(LCD_FSMC_ADDR_CMD) = regval;
+////		HAL_SRAM_Write_16b(&hsram1, (uint32_t*)LCD_FSMC_ADDR_CMD, (uint16_t*)&regval, 1);
+//	#endif  // LCD_USE_FSCM
+//	}
+	#if LCD_USE_FSCM
+	void LCD_WR_REG(volatile u8 regval)
+	{
 		regval = regval;
-		*(uint16_t*)(LCD_FSMC_ADDR_CMD) = regval;
-//		HAL_SRAM_Write_16b(&hsram1, (uint32_t*)LCD_FSMC_ADDR_CMD, (uint16_t*)&regval, 1);
-	#endif  // LCD_USE_FSCM
+		LCD->LCD_REG = regval;
 	}
+	#endif
 	//写LCD数据
 	//data:要写入的值
-	void LCD_WR_DATA(u16 data)
+//	void LCD_WR_DATA(u16 data)
+//	{
+//	#if !LCD_USE_FSCM
+//		LCD_RS_SET();
+//		LCD_CS_RESET();
+//		DATAOUT(data);
+//		LCD_WR_RESET();
+//		LCD_WR_SET();
+//		LCD_CS_SET();
+//	#else
+//		data = data;
+//		*(uint16_t*)(LCD_FSMC_ADDR_DATA) = data;
+////		HAL_SRAM_Write_16b(&hsram1, (uint32_t*)LCD_FSMC_ADDR_DATA, &data, 1);
+//	#endif  // LCD_USE_FSCM
+//	}	
+	#if LCD_USE_FSCM
+	void LCD_WR_DATA(volatile u16 data)
 	{
-	#if !LCD_USE_FSCM
-		LCD_RS_SET();
-		LCD_CS_RESET();
-		DATAOUT(data);
-		LCD_WR_RESET();
-		LCD_WR_SET();
-		LCD_CS_SET();
-	#else
 		data = data;
-		*(uint16_t*)(LCD_FSMC_ADDR_DATA) = data;
-//		HAL_SRAM_Write_16b(&hsram1, (uint32_t*)LCD_FSMC_ADDR_DATA, &data, 1);
-	#endif  // LCD_USE_FSCM
-	}	
+		LCD->LCD_RAM = data;
+	}
+	#endif
 	//LCD写GRAM
 	//RGB_Code:颜色值
-	void LCD_WriteRAM(u16 RGB_Code)
+//	void LCD_WriteRAM(u16 RGB_Code)
+//	{
+//	#if !LCD_USE_FSCM
+//		LCD_RS_SET();
+//		LCD_CS_RESET();
+//		DATAOUT(RGB_Code);
+//		LCD_WR_RESET();
+//		LCD_WR_SET();
+//		LCD_CS_SET();
+//	#else
+//		RGB_Code = RGB_Code;
+//		*(uint16_t*)(LCD_FSMC_ADDR_DATA) = RGB_Code;
+////		HAL_SRAM_Write_16b(&hsram1, (uint32_t*)LCD_FSMC_ADDR_DATA, &RGB_Code, 1);
+//	#endif  // LCD_USE_FSCM
+//	}
+	#if LCD_USE_FSCM
+	void LCD_WriteRAM(volatile u16 RGB_Code)
 	{
-	#if !LCD_USE_FSCM
-		LCD_RS_SET();
-		LCD_CS_RESET();
-		DATAOUT(RGB_Code);
-		LCD_WR_RESET();
-		LCD_WR_SET();
-		LCD_CS_SET();
-	#else
 		RGB_Code = RGB_Code;
-		*(uint16_t*)(LCD_FSMC_ADDR_DATA) = RGB_Code;
-//		HAL_SRAM_Write_16b(&hsram1, (uint32_t*)LCD_FSMC_ADDR_DATA, &RGB_Code, 1);
-	#endif  // LCD_USE_FSCM
+		LCD->LCD_RAM = RGB_Code;
 	}
+	#endif
 #else
 	//写寄存器函数
 	//regval:寄存器值
