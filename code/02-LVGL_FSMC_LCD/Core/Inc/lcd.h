@@ -166,16 +166,22 @@ u16 LCD_Get_Width(void);
 u16 LCD_Get_Height(void);
 u8 LCD_Get_Dir(void);
 u8 LCD_Get_Scan_Dir(void);
-//void LCD_WR_REG(u8);
-//void LCD_WR_DATA(u16);
+#if LCD_USE_FSCM
 void LCD_WR_REG(volatile u8);
 void LCD_WR_DATA(volatile u16);
+#else
+void LCD_WR_REG(u8);
+void LCD_WR_DATA(u16);
+#endif
 void LCD_Scan_Dir(u8 dir);							//设置屏扫描方向
 void LCD_Display_Dir(u8 dir);						//设置屏幕显示方向
 void LCD_Init(void);								//初始化
 void LCD_WriteRAM_Prepare(void);
-//void LCD_WriteRAM(u16 RGB_Code);	
-void LCD_WriteRAM(volatile u16 RGB_Code);	
+#if LCD_USE_FSCM
+void LCD_WriteRAM(volatile u16 RGB_Code);
+#else
+void LCD_WriteRAM(u16 RGB_Code);	
+#endif	
 #if !LCD_USE_FSCM
 	#ifdef DATAOUT
 		#undef DATAOUT

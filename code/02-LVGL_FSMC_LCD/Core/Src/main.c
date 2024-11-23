@@ -107,8 +107,8 @@ int main(void)
   lv_init();
   lv_port_disp_init();
   
-//  lv_demo_benchmark();
-  lv_demo_stress();
+  lv_demo_benchmark();
+//  lv_demo_stress();
   
   while (1)
   {

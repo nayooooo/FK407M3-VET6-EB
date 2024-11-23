@@ -178,14 +178,15 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
 		
 		uint16_t width, height;
 		uint32_t total;
-		width = area->x2 - area->x1 + 1;
-		height = area->y2 - area->y1 + 1;
+		width = (uint16_t)(area->x2 - area->x1 + 1);
+		height = (uint16_t)(area->y2 - area->y1 + 1);
 		total = width * height;
-		LCD_Set_Window(area->x1, area->y1, width, height);
+		LCD_Set_Window((uint16_t)(area->x1), (uint16_t)(area->y1), width, height);
 		LCD_WriteRAM_Prepare();
 	#if LCD_USE_FSCM
 		for (uint32_t i = 0; i < total; i++) {
-			LCD_WriteRAM(color_p[i].full);
+//			LCD_WriteRAM(color_p[i].full);
+			LCD->LCD_RAM = color_p[i].full;
 		}
 	#else
 		LCD_RS_SET();
@@ -197,6 +198,9 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
 		}
 		LCD_CS_SET();
 	#endif
+
+//		LCD_Color_Fill(area->x1, area->y1, area->x2, area->y2, (uint16_t*)color_p);
+	
 	}
 
     /*IMPORTANT!!!
