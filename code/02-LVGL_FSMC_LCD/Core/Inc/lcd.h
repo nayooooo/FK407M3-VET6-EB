@@ -104,11 +104,8 @@ typedef struct
 	volatile uint16_t LCD_REG;
     volatile uint16_t LCD_RAM;
 } LCD_TypeDef;
-#define LCD_BASE        ((uint32_t)(0x60000000 | 0x0001FFFE))
+#define LCD_BASE        ((uint32_t)(0x60000000 | 0x0001FFFE))  // (LCD_BASE+2)>>1=0x30010000, A16=1
 #define LCD             ((LCD_TypeDef *) LCD_BASE)
-
-#define LCD_FSMC_ADDR_CMD			((uint32_t)0x60020000)
-#define LCD_FSMC_ADDR_DATA			((uint32_t)0x60020002)
 #endif  // LCD_USE_FSCM 
 
 extern u8 DFT_SCAN_DIR;

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [02-LVGL_FSMC_LCD\02-LVGL_FSMC_LCD.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image 02-LVGL_FSMC_LCD\02-LVGL_FSMC_LCD.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Sun Nov 24 05:47:58 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Sun Nov 24 18:36:27 2024
 <BR><P>
 <H3>Maximum Stack Usage =       1032 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -8153,8 +8153,8 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[d7]"></a>disp_flush</STRONG> (Thumb, 148 bytes, Stack size 24 bytes, lv_port_disp.o(.text.disp_flush))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = disp_flush &rArr; LCD_Set_Window
+<P><STRONG><a name="[d7]"></a>disp_flush</STRONG> (Thumb, 466 bytes, Stack size 56 bytes, lv_port_disp.o(.text.disp_flush))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = disp_flush &rArr; LCD_Set_Window
 </UL>
 <BR>[Calls]<UL><LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Set_Window
 <LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_WriteRAM_Prepare
@@ -8753,7 +8753,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_demo_benchmark.o(.data.scenes)
 </UL>
-<P><STRONG><a name="[271]"></a>line_create</STRONG> (Thumb, 446 bytes, Stack size 48 bytes, lv_demo_benchmark.o(.text.line_create))
+<P><STRONG><a name="[271]"></a>line_create</STRONG> (Thumb, 454 bytes, Stack size 48 bytes, lv_demo_benchmark.o(.text.line_create))
 <BR><BR>[Stack]<UL><LI>Max Depth = 520 + Unknown Stack Size
 <LI>Call Chain = line_create &rArr; fall_anim &rArr; lv_obj_set_x &rArr; lv_obj_set_style_x &rArr; lv_obj_set_local_style_prop &rArr; lv_obj_refresh_style &rArr; lv_obj_refresh_ext_draw_size &rArr; lv_obj_invalidate &rArr; lv_obj_area_is_visible &rArr; lv_obj_get_transformed_area &rArr; lv_obj_transform_point &rArr;  lv_obj_transform_point (Cycle)
 </UL>
@@ -10843,8 +10843,8 @@ Local Symbols
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_event
 </UL>
 
-<P><STRONG><a name="[247]"></a>get_button_from_point</STRONG> (Thumb, 410 bytes, Stack size 88 bytes, lv_btnmatrix.o(.text.get_button_from_point))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = get_button_from_point &rArr; lv_obj_get_style_prop &rArr; lv_style_get_prop
+<P><STRONG><a name="[247]"></a>get_button_from_point</STRONG> (Thumb, 402 bytes, Stack size 80 bytes, lv_btnmatrix.o(.text.get_button_from_point))
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = get_button_from_point &rArr; lv_obj_get_style_prop &rArr; lv_style_get_prop
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on

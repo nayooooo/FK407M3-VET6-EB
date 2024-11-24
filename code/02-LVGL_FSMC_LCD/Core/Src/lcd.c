@@ -334,11 +334,11 @@ void LCD_Color_Fill(u16 sx,u16 sy,u16 ex,u16 ey,u16 *color)
 	u16 i,j;
 	width=ex-sx+1; 		//得到填充的宽度
 	height=ey-sy+1;		//高度
+	LCD_Set_Window(sx, sy, width, height);
+	LCD_WriteRAM_Prepare();     //开始写入GRAM
  	for(i=0;i<height;i++)
 	{
- 		LCD_SetCursor(sx,sy+i);   	//设置光标位置 
-		LCD_WriteRAM_Prepare();     //开始写入GRAM
-		for(j=0;j<width;j++)LCD_WriteRAM(color[i*height+j]);//写入数据 
+		for(j=0;j<width;j++)LCD_WriteRAM(color[i*width+j]);//写入数据 
 	}	  
 }  
 //画点
